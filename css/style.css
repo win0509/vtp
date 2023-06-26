@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;1,500&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/* Main Root Style */
+:root{
+  --color-dark : rgb(34, 36, 41);
+  --color-border : rgb(92, 96, 105);
+  --color-bright : rgb(224, 228, 228);
+
+  --el-25 : 0.25rem;
+  --el-50 : 0.5rem;
+  --el-75 : 0.75rem;
+  --el-100 : 1rem;
+  --el-125 : 1.25rem;
+  --el-150 : 1.5rem;
+}
+
+/* Reset CSS */
+html{scroll-behavior: smooth;}
+body{font-size:0.875rem; font-family: 'IBM Plex Mono', 'Noto Sans KR'; color:var(--color-bright);}
+*{margin:0; padding:0; box-sizing:border-box;}
+ol, ul{list-style:none;}
+a{text-decoration: none; color:var(--color-bright);}
+em, strong, i, b{font-weight:normal; font-style:normal;}
+button, input, textarea{border-radius:0; background:var(--color-bright); border:0; outline:0;}
+img{display:block;}
+
+/* Common Style */
+section{background:var(--color-dark);}
+.container{margin:0 var(--el-100); padding:var(--el-150) 0; text-align: center; border-left:1px solid var(--color-border); border-right:1px solid var(--color-border); background:var(--color-dark);}
+
+.wrapper{width:100%; height:100vh; max-width:500px; background:var(--color-dark); margin:auto;}
+.wrapper header{border-bottom:1px solid var(--color-border);}
+
+/* Select Button Style */
+section .container{padding-top:0; padding-bottom:0;}
+section .select-lang{width:100%; height:auto; padding:var(--el-25);}
+section .select-lang h3{padding:var(--el-100) 0; background:var(--color-bright); color:var(--color-dark); font-weight:400; font-size:1rem;}
+section .select-btns{width:100%; height:auto; padding:var(--el-100) 0; border:1px solid var(--color-border); margin-top:var(--el-50); display:flex; justify-content: space-evenly;}
+section .select-btns button{width:23%; padding:var(--el-100) 0; border:1px solid var(--color-border); color:var(--color-dark);}
+section .select-btns button.active{background:var(--color-dark); color:var(--color-bright);}
+
+/* Voice Input and Translated Input Box Style */
+section .lang-box{width:100%; height:100%; background:var(--color-dark); padding:var(--el-25); position:relative;}
+section .lang-box textarea{width:100%; height:150px; border:1px solid var(--color-border); background:var(--color-dark); padding:var(--el-100); resize:none; color:var(--color-bright);}
+
+/* Language Switch Button Style */
+section .switch-btns-wrapper{width:100%; height:auto; padding:0 var(--el-25);}
+section .switch-btns{width:100%; height:auto; display:flex; align-items: center; justify-content: center; background:var(--color-bright); color:var(--color-dark); padding:var(--el-100) 0; column-gap: var(--el-50);}
+
+/* Result Button Style */
+section .result-btns-box{width:100%; height:auto; padding:0 var(--el-25);}
+section .result-btns,
+section .voice-btns{width:100%; height:auto; display:flex; justify-content: space-evenly;}
+section .voice-btns{margin-bottom:.5rem;}
+section .result-btns button,
+section .voice-btns button{width:48%; padding:var(--el-100) 0; background:var(--color-bright); color:var(--color-dark);}
+
+/* Footer Style */
+footer{width:100%; height:auto; padding:0 var(--el-100); border-top:1px solid var(--color-border); border-bottom:1px solid var(--color-border); margin-top:var(--el-50); background:var(--color-dark);}
+footer .footer-contents{width:100%; height:auto; padding:var(--el-100) 0; display:flex; justify-content: space-evenly; _border-right:1px solid var(--color-border); _border-left:1px solid var(--color-border); align-items: center;}
+footer .footer-contents p{font-size:0.875rem;}
+footer button{padding:0.5rem 2rem; color:var(--color-dark);}
+
+/* Loading Ring Style */
+.lds-ring {display: flex; position: absolute; left:50%; top:50%; transform:translate(-50%, -50%); width: 80px; height: 80px; display:none; align-items: center; justify-content: center;}
+.lds-ring.loading{display:flex;}
+.lds-ring div {box-sizing: border-box;display: block;position: absolute;width: 40px;height: 40px;margin: 5px; border: 5px solid rgb(224, 228, 228); border-radius: 50%; animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite; border-color: #fff transparent transparent transparent;}
+.lds-ring div:nth-child(1) {
+ animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+ animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+ animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+ 0% {
+   transform: rotate(0deg);
+ }
+ 100% {
+   transform: rotate(360deg);
+ }
+}
+
+

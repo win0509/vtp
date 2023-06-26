@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1" />
+  <title>VTP</title>
+
+  <!-- Lemix Icon Link -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- Main Style Link -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <h2>Voice Translator</h2>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="select-lang">
+          <div class="select-info">
+            <h3>번역할 언어를 선택해 주세요.</h3>
+          </div>
+          <div class="select-btns">
+            <button class="active" id="en">영어</button>
+            <button id="zh-CN">중국어</button>
+            <button id="ja">일본어</button>
+            <button id="es">스페인어</button>
+          </div>
+        </div>
+
+        <div class="lang-from lang-box">
+          <textarea placeholder="한국어 음성을 입력해 주세요." id="search_console"></textarea>
+        </div>
+
+        <div class="voice-btns">
+          <button class="v-start" onclick="startRecord()">시작</button>
+          <button class="v-stop" onclick="endRecord()">멈춤</button>
+        </div>
+
+        <div class="switch-btns-wrapper">
+          <div class="switch-btns">
+            <span class="from" value="ko">한국어</span>
+            <i class="ri-arrow-right-line"></i>
+            <span class="to" value="en">영어</span>
+          </div>
+        </div>
+
+        <div class="lang-to lang-box">
+          <textarea placeholder="영어로 번역 됩니다." id="text"></textarea>
+          <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <div class="result-btns-box">
+          <div class="result-btns">
+            <button class="translate">번역</button>
+            <button class="read-text">읽기</button>
+          </div>
+        </div>
+
+        <footer>
+          <div class="footer-contents">
+            <p>언어를 바꿀 경우 초기화 해주세요.</p>
+            <button class="reset-btn">초기화</button>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </div>
+  
+  <!-- jQuery CDN Link -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+  <!-- <script src="https://voice.luzspat.com/js/cloudvoice.js"></script> -->
+
+  <!-- Main Script Link -->
+  <script src="js/custom.js"></script>
+</body>
+</html>
